@@ -1,0 +1,66 @@
+﻿@model SeaBattle.Models.UserStats
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserStats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GamesPlayed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GamesPlayed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GamesWon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GamesWon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPlayTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPlayTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LongestTimePlayed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LongestTimePlayed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortestTimePlayed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortestTimePlayed)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

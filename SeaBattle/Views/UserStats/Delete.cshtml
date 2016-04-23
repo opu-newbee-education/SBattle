@@ -1,0 +1,72 @@
+﻿@model SeaBattle.Models.UserStats
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UserStats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GamesPlayed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GamesPlayed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GamesWon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GamesWon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPlayTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPlayTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LongestTimePlayed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LongestTimePlayed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortestTimePlayed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortestTimePlayed)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
